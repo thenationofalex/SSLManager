@@ -1,0 +1,20 @@
+SSLManager
+
+SSL Manager has been designed as a frontend module to generate the required Key and CSR files to order an SSL Certificate then store a copy in a database and email the site admin and user.
+
+INSTALLATION
+
+* Copy sslmanager.cgi and SSLManager.pm to your cgi directory
+* Setup your database to store save Key and CSR Data, a Postgresql SQL Dump has been provided. 
+  You will need to add the Username and Password details in SSLManager.pm
+* Copy the templates folder to your webservers document root.
+
+
+The following Perl Modules are required. 
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2012 Alex Best
+
+This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

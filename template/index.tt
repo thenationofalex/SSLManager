@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<head>
+    <title>SSLManager</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="ssl/style.css" type="text/css" />
+</head>
+<body>
+<div id="container">
+<div id="content">
+    <h1><img src="ssl/ssl.png"> SSL Manager</h1>
+        <div id="nav">
+            <ul id="nav">
+            <li class="current"><a href="sslmanager.cgi">Home</a></li>
+            <li><a href="?rm=view">View</a>
+            </ul>
+        </div>
+	<div class="clear"></div>
+    <div id="yield">
+	<!-- Generates Content Here -->
+	<div id="cLeft">
+        [% my_form %]
+    </div>
+	<div id="cRight">
+	<h1>Instructions</h1>
+	<p>
+	    <strong>Common Name</strong> - The URL intended to be secure eg: www.domainname.com <br />
+	    <strong>Country</strong> - 2 Letter country code <br />
+	    <strong>State</strong> - <span style="color:#800000;">Cannot</span> be abbreviated <br />
+	    <strong>City</strong> - eg: Sydney <br />
+	    <strong>Organizational</strong> - The EXACT Company Name <br />
+	    <strong>Organizational Unit</strong> - Section of the company <br />
+	    <strong>Generic Email Address</strong> - eg : admin@domain.com <br />
+	 </p>
+	</div>
+    </div>
+</div>
+</div>
+</body>
+</html>
