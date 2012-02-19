@@ -92,8 +92,8 @@ sub create {
 						$object->save();
 						unlink $key_filename || die "Cant delete the temporary key file. FIX IMMEDIATELY\n";
 						my $msg = MIME::Lite->new(
-							From    => 'ssladmin@sitesuite.com.au',
-							To      => 'ssladmin@sitesuite.com.au',
+							From    => 'generic@email.com.au',
+							To      => 'generic@email.com.au',
 							Subject => 'SSL Key and CSR for ' . $common_name,
 							Data    => 'Country Code: ' . $country_code . "\n" .
 								'State: ' . $state . "\n" .
@@ -105,7 +105,7 @@ sub create {
 								$ssl_key . "\n" .
 								$csr,
 						);
-						$msg->send('smtp','bill.sitesuite.net',Timeout=>60,Debug => 1) || die "Error Cant Send Email";
+						$msg->send('smtp','your.mailserver.com.au',Timeout=>60,Debug => 1) || die "Error Cant Send Email";
 						return $self->redirect('/template/thank.html');
                     }
                  }
